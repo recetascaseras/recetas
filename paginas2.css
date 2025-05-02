@@ -1,0 +1,263 @@
+:root{
+    --primary-color: #4f49a6;
+    --secondary-color: #48ca95; 
+    --bg-color: #f7f7f7; 
+    --ligth-color: #fff; 
+
+    --header-title-font: poppins-bold;
+    --text-font: poppins;
+    --menu-font: poppins-bold;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--text-font);
+    list-style: none;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url(./fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: poppins-extrabold;
+    src: url(./fonts/Poppins-ExtraBold.ttf);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url(./img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo {
+    
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 10px;
+    color: var(--secondary-color);
+    display: block; 
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-img {
+    margin: 5px 25px;
+    width: 400px;
+    height: 300px;   
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    margin-bottom: 50px;
+}
+
+.header-content-txt {
+    max-width: 500px;
+    color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    font-size: 40px;
+    font-family: var(--header-title-font);
+    margin-top: 20px;
+}
+
+.header-subtitle {
+    font-size: 24px;
+    color: var(--primary-color);
+    
+}
+
+.header-p {
+    margin-top: 40px;
+    font-family: var(--text-font);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+    background-image: url(./img/fondo\ pagina\ 1.jpg);
+}
+
+.card {
+    margin: 3px;
+    padding: 30px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+    max-width: 200px;
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .img-section {
+    width: 180px;
+    height: 80px;
+    
+   }
+
+.card h4{
+    text-align: center;
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+
+
+footer {
+    background-image: url(./img/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    max-width: 1200px;
+    padding: 5px;   
+    margin: 10px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;  
+    
+}
+
+.footer-content {
+    max-width: 1200;
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 10px;  
+}
+
+
+@media(max-width: 991px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--secondary-color);
+        display: none;  
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    .menu .navbar ul li a {
+        color: var(--ligth-color);
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        flex-direction: column;
+        padding: 100px 30px;
+    }
+
+    .header-content-txt {
+        margin-left: 20px;
+    }
+
+    .header-title {
+        font-size: 30px;
+    }
+
+    .header-subtitle {
+        font-size: 18px;
+    }
+
+    .header-content-txt p {
+        font-size: 12px;
+    }
+
+   .card .img-section {
+    width: 100;
+    height: 50;
+    
+   }
+
+   
+
+   
+}
+
